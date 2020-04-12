@@ -15,6 +15,51 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" name="navi-toggle" class="navigation__checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                &nbsp;
+            </span>
+        </label>
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__num">01</span>
+                        About Natours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__num">02</span>
+                        Your benifits
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__num">03</span>
+                        Popular tours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__num">04</span>
+                        Stories
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__num">05</span>
+                        Book now
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="img/logo-white.png" alt="logo">
@@ -24,7 +69,7 @@
                 <span class="heading__main">Outdoors</span>
                 <span class="heading__sub">is where life happens</span>
             </h1>
-            <a class="header__btn btn btn--white btn--animated" href="#">
+            <a class="header__btn btn btn--white btn--animated" href="#section-tours">
                 Discover our tours
             </a>
         </div>
@@ -124,12 +169,9 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1.jpg" alt="Photo-1"
-                            class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2.jpg" alt="Photo-2"
-                            class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3.jpg" alt="Photo-3"
-                            class="composition__photo composition__photo--p3">
+                        <img src="img/nat-1.jpg" alt="Photo-1" class="composition__photo composition__photo--p1">
+                        <img src="img/nat-2.jpg" alt="Photo-2" class="composition__photo composition__photo--p2">
+                        <img src="img/nat-3.jpg" alt="Photo-3" class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -184,7 +226,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class=" heading-secondary">
                     Most popular tours
@@ -221,7 +263,7 @@
                                     <div class="card__price-value">
                                         $297
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now</a>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +301,7 @@
                                     <div class="card__price-value">
                                         $497
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now</a>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +338,7 @@
                                     <div class="card__price-value">
                                         $897
                                     </div>
-                                    <a href="#" class="btn btn--white">Book now</a>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
                                 </div>
                             </div>
                         </div>
@@ -398,16 +440,14 @@
                             </div>
                             <div class="form__group">
                                 <div class="form__radio-group">
-                                    <input type="radio" class="form__radio-input" id="small"
-                                        name="size">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
                                     <label for="small" class="form__radio-lable">
                                         <span class="form__radio-button"></span>
                                         Small tour group
                                     </label>
                                 </div>
                                 <div class="form__radio-group">
-                                    <input type="radio" class="form__radio-input" id="large"
-                                        name="size">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
                                     <label for="large" class="form__radio-lable">
                                         <span class="form__radio-button"></span>
                                         Large tour group
@@ -462,11 +502,11 @@
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">
-                    Learning course. Student 
+                    Learning course. Student
                     <a href="" class="footer__link">
-                       Olga Ventsel.
+                        Olga Ventsel.
                     </a>
-                    Course name: 
+                    Course name:
                     <a href="" class="footer__link">
                         "Advanced CSS and SASS".
                     </a>
@@ -475,7 +515,38 @@
             </div>
         </div>
     </footer>
-
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">
+                    &times;
+                </a>
+                <h2 class="heading-secondary u-margin-buttom-small">Start boofing now</h2>
+                <h3 class="heading-tertiary u-margin-buttom-small">
+                    Important &ndash; Please read these terms before booking
+                </h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Fringilla est ullamcorper eget nulla facilisi etiam dignissim. Tristique
+                    senectus et netus et malesuada. Gravida dictum fusce ut placerat orci nulla. Dictum fusce ut
+                    placerat orci. Amet mauris commodo quis imperdiet massa tincidunt nunc. Quis hendrerit dolor magna
+                    eget est lorem ipsum dolor. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Egestas
+                    integer eget aliquet nibh praesent tristique magna. Id nibh tortor id aliquet lectus. Potenti nullam
+                    ac tortor vitae purus faucibus. Erat imperdiet sed euismod nisi. Donec adipiscing tristique risus
+                    nec feugiat in. Pharetra massa massa ultricies mi quis hendrerit. Elementum tempus egestas sed sed
+                    risus pretium quam vulputate. Viverra vitae congue eu consequat ac felis donec et odio. In fermentum
+                    et sollicitudin ac orci phasellus egestas tellus rutrum.
+                </p>
+                <a href="#" class="btn btn--primary">
+                    Book now
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
