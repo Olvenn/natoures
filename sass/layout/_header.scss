@@ -1,11 +1,21 @@
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($primary-color, 0.8), rgba($primary-color, 0.4)), url("../img/hero.jpg");
+    background-image: linear-gradient(to right bottom, 
+    rgba($primary-color, 0.8), 
+    rgba($primary-color, 0.4)), 
+    url("../img/hero.jpg");
+
+
     background-size: cover;
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    background-color: rebeccapurple;
+
+    @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 }
 
 .header__logo-box {
@@ -34,6 +44,11 @@
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
 
+    @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+    }
+
     /*     
     animation-delay: 3s;
     animation-iteration-count: 3;
@@ -55,6 +70,10 @@
 
     animation: moveInRight;
     animation-duration: 2s;
+
+    @include respond(phone) {
+        letter-spacing: .5rem;
+    }
 }
 
 .header__textbox {
